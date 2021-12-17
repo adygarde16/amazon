@@ -1,0 +1,10 @@
+<h1>Task-1</h1>
+<p>Create Sign-in page.</p>
+
+
+<% if current_user %>
+<%= button_to "Sign out", destroy_user_session_path, method: :delete %>
+<% else %>
+<%= button_to "Sign up", new_registration_path %>
+<%= button_to "Sign In", new_session_path %>
+<% end %>

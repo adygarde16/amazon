@@ -12,10 +12,5 @@ class ApplicationController < ActionController::Base
     devise_parameter_sanitizer.permit :sign_in, keys: [:login, :password]
     devise_parameter_sanitizer.permit :account_update, keys: added_attrs
 		
-	end
-
-    def age(dob)
-    now = Time.now.utc.to_date
-    snow.year - dob.year - ((now.month > dob.month || (now.month == dob.month && now.day >= dob.day)) ? 0 : 1)
-end
+	end  
 end

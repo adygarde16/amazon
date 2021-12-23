@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_12_22_115035) do
+ActiveRecord::Schema.define(version: 2021_12_23_102135) do
 
   create_table "users", charset: "utf8mb4", collation: "utf8mb4_0900_ai_ci", force: :cascade do |t|
     t.string "first_name", default: "", null: false
@@ -40,7 +40,7 @@ ActiveRecord::Schema.define(version: 2021_12_22_115035) do
     t.string "confirmable_token"
     t.datetime "confirm_at"
     t.datetime "confirmation_to_user_sent_at"
-    t.string "dob", default: "", null: false
+    t.datetime "dob"
     t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true

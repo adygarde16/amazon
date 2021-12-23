@@ -1,0 +1,12 @@
+<style>
+h2 {text-align: center;}
+p {text-align: center;}
+div {text-align: center;}
+</style>
+
+
+<p>Welcome <%= @email %>!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %></p>

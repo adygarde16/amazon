@@ -1,6 +1,13 @@
 <h1>Task-1</h1>
 <p>Create Sign-in page.</p>
 
+<h2>Products</h2>
+<p>Order here please.</p>
+
+<h3>Samsung A51</h3>
+
+<%= button_to "Order Now", new_user_path %>
+
 
 <% if current_user %>
 <%= button_to "Sign out", destroy_user_session_path, method: :delete %>
